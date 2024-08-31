@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Contact Page</title>
+    <style>
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+        }
+        label {
+            width: 100px;
+            text-align: right;
+            padding-right: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            flex: 1;
+            width: 100%;
+        }
+        .submit-group {
+            display: flex;
+            justify-content: flex-start;
+        }
+        input[type="submit"] {
+            margin-left: 110px; /* 100px for label width + 10px for padding */
+        }
+    </style>
+</head>
+<body>
+    <h1>My Contact Info</h1>
+    <p>Email: alvin@swiftfixpro.com</p>
+    <p>Phone: (+65) 81124942</p>
+
+    <form action="mailto:alvin@swiftfixpro.com" method="post" enctype="text/plain">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Type in your name here">
+         </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Type in Your email">
+         </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Type in Your phone number">
+         </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required cols="30" rows="10" placeholder="Type in your message"></textarea>
+         </div>
+        <div class="submit-group">
+            <input type="submit" value="Submit">
+         </div>
+    </form>
+</body>
+</html>
